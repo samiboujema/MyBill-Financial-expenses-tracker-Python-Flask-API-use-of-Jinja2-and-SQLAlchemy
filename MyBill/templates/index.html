@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+{% if expenses | length < 1 %}
+   <h2> No expenses added yet! <br> Stay organized by adding them!</h2>
+{% else %}
+
+
+ <div class="content">
+    <table> 
+        <tr>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Date</th>
+            <th>Actions</th>
+        </tr>
+        {% for expense in expenses %}
+        <tr>
+            <td>{{ expense.amount }}</td>
+            <td>{{ expense.category }}</td>
+            <td>{{ expense.created.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+            <td>
+                <form action="/delete/{{ expense.id }}" method="post" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>
+           <br>
+           <br>
+      
+                <a href="/update/{{ expense.id }}">Update</a>
+            </td>
+            
+            
+        </tr>
+        {% endfor %}
+    </table>
+{% endif %}
+    <form action="/" method="POST">
+        <input type="text" name="amount" id="amount" value="{{ amount }}" placeholder="Enter amount spent"/>
+        <input type="text" name="category" id="category" value="{{ category }}" placeholder="Enter expense category"/>
+        <input type="submit" value="submit" />
+    </form>
+</div>
+{% endblock %}
