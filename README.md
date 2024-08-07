@@ -2,6 +2,8 @@ Financial Tracker:
 
 A CRUD web application developed using Flask, SQLAlchemy, HTML, Jinja2, and CSS for managing and tracking personal finances. I made this software to explore backend development concepts and create a functional financial tracking tool.
 
+Major credit to @codewithjosh on youtube who's introduction to flask and SQLalchemy was what taught me these concepts. 
+
 Project Overview:
 
 The Financial Tracker is a backend-focused web application that allows users to:
