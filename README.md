@@ -1,6 +1,6 @@
 Financial Tracker:
 
-A CRUD web application developed using Flask, SQLAlchemy, HTML, Jinja2, and CSS for managing and tracking personal finances. This project is designed to explore backend development concepts and create a functional financial tracking tool.
+A CRUD web application developed using Flask, SQLAlchemy, HTML, Jinja2, and CSS for managing and tracking personal finances. I made this software to explore backend development concepts and create a functional financial tracking tool.
 
 Project Overview:
 
